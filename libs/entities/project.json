@@ -1,0 +1,24 @@
+{
+  "root": "libs/entities",
+  "projectType": "library",
+  "sourceRoot": "libs/entities",
+  "targets": {
+    "build": {
+      "executor": "@nx-dotnet/core:build",
+      "outputs": ["dist/libs/entities"],
+      "options": {
+        "configuration": "Debug",
+        "noDependencies": true
+      },
+      "configurations": {
+        "production": {
+          "configuration": "Release"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx-dotnet/core:format"
+    }
+  },
+  "tags": ["entities", "core"]
+}

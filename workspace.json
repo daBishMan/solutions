@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "projects": {},
-  "cli": {
-    "defaultCollection": "@nrwl/workspace"
+  "projects": {
+    "api": "apps/api",
+    "entities": "libs/entities"
   }
 }
