@@ -1,11 +1,11 @@
 {
-  "root": "apps/api",
+  "root": "apps/dotnet-api",
   "projectType": "application",
-  "sourceRoot": "apps/api",
+  "sourceRoot": "apps/dotnet-api",
   "targets": {
     "build": {
       "executor": "@nx-dotnet/core:build",
-      "outputs": ["dist/apps/api"],
+      "outputs": ["dist/apps/dotnet-api"],
       "options": {
         "configuration": "Debug",
         "noDependencies": true
