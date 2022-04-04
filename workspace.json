@@ -2,6 +2,6 @@
   "version": 2,
   "projects": {
     "dotnet-api": "apps/dotnet-api",
-    "entities": "libs/entities"
+    "dotnet-entities": "libs/dotnet-entities"
   }
 }
