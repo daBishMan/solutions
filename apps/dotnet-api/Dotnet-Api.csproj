@@ -23,7 +23,6 @@
 
   <Target Name="CheckNxModuleBoundaries" BeforeTargets="Build">
 
-    <Exec Command="node ../../node_modules/@nx-dotnet/core/src/tasks/check-module-boundaries.js -p api" />
-
+    <Exec Command="node ../../node_modules/@nx-dotnet/core/src/tasks/check-module-boundaries.js -p dotnet-api"/>
   </Target>
 </Project>
