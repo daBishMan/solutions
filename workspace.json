@@ -2,6 +2,54 @@
   "version": 2,
   "projects": {
     "dotnet-api": "apps/dotnet-api",
-    "dotnet-entities": "libs/dotnet-entities"
+    "dotnet-core": {
+      "root": "libs/dotnet-core",
+      "projectType": "library",
+      "sourceRoot": "libs/dotnet-core",
+      "targets": {
+        "build": {
+          "executor": "@nx-dotnet/core:build",
+          "outputs": ["dist/libs/dotnet-core"],
+          "options": {
+            "configuration": "Debug",
+            "noDependencies": true
+          },
+          "configurations": {
+            "production": {
+              "configuration": "Release"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nx-dotnet/core:format"
+        }
+      },
+      "tags": []
+    },
+    "dotnet-entities": "libs/dotnet-entities",
+    "dotnet-infrastructure": {
+      "root": "libs/dotnet-infrastructure",
+      "projectType": "library",
+      "sourceRoot": "libs/dotnet-infrastructure",
+      "targets": {
+        "build": {
+          "executor": "@nx-dotnet/core:build",
+          "outputs": ["dist/libs/dotnet-infrastructure"],
+          "options": {
+            "configuration": "Debug",
+            "noDependencies": true
+          },
+          "configurations": {
+            "production": {
+              "configuration": "Release"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nx-dotnet/core:format"
+        }
+      },
+      "tags": []
+    }
   }
 }
