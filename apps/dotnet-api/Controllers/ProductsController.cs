@@ -2,7 +2,7 @@ using Dotnet.Core.Entities;
 using Dotnet.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API.Controllers;
+namespace Dotnet.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

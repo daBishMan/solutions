@@ -25,7 +25,7 @@
 // app.Run();
 
 // ! We need this here, .NET 3.1 or .NET 5 style
-namespace API;
+namespace Dotnet.API;
 public class Program
 {
   public static void Main(string[] args)

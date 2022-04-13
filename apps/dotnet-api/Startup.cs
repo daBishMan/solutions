@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
 // ! We need this here, .NET 3.1 or .NET 5 style
-namespace API;
+namespace Dotnet.API;
 public class Startup
 {
   private readonly IConfiguration _config;
