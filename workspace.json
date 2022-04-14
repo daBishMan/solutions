@@ -1,8 +1,8 @@
 {
   "version": 2,
   "projects": {
-    "dotnet-api": "apps/dotnet-api",
-    "dotnet-core": "libs/dotnet-core",
-    "dotnet-infrastructure": "libs/dotnet-infrastructure"
+    "dotnet-api": "apps/dotnet/api",
+    "dotnet-core": "libs/dotnet/core",
+    "dotnet-infrastructure": "libs/dotnet/infrastructure"
   }
 }

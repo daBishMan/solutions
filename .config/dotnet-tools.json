@@ -1,10 +1,5 @@
 {
   "version": 1,
   "isRoot": true,
-  "tools": {
-    "dotnet-format": {
-      "version": "6.3.317301",
-      "commands": ["dotnet-format"]
-    }
-  }
+  "tools": {}
 }
