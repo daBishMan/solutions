@@ -1,7 +1,5 @@
-
 using System.Text.Json;
 using Dotnet.Core.Entities;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace Dotnet.Infrastructure.Data;
@@ -11,7 +9,7 @@ public class StoreContextSeed
   {
     try
     {
-      // ! Not sure why we need to 3 three slashes for the first directories but not the rest???
+      // ! Not sure why we need to 3 three slashes for the first path but not the rest???
       if (!context.ProductBrands.Any())
       {
         var brandsData =
@@ -49,7 +47,6 @@ public class StoreContextSeed
         await context.SaveChangesAsync();
       }
 
-      // await context.SaveChangesAsync();
     }
     catch (Exception ex)
     {

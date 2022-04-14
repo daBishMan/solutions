@@ -43,3 +43,5 @@ apps/*/obj
 libs/*/bin
 libs/*/obj
 obj/Infrastructure.EntityFrameworkCore.targets
+apps/dotnet-api/dotnet-api.db-shm
+apps/dotnet-api/dotnet-api.db-wal
