@@ -9,6 +9,7 @@ namespace Dotnet.API.Controllers;
 public class ProductsController : ControllerBase
 {
   private readonly IProductRepository _repository;
+
   public ProductsController(IProductRepository repository)
   {
     _repository = repository;

@@ -3,7 +3,8 @@ using Dotnet.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Dotnet.Infrastructure.Data;
-  public class StoreContext : DbContext
+
+public class StoreContext : DbContext
 {
   public StoreContext(DbContextOptions<StoreContext> options) : base(options)
   {

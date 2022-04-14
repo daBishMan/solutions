@@ -1,19 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <ItemGroup>
-    <ProjectReference Include="..\dotnet-core\dotnet-core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.2" />
-  </ItemGroup>
-
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <OutputPath>../../dist/libs/dotnet-infrastructure</OutputPath>
-  </PropertyGroup>
-
-  <Target Name="CheckNxModuleBoundaries" BeforeTargets="Build">
-    <Exec Command="node ../../node_modules/@nx-dotnet/core/src/tasks/check-module-boundaries.js -p dotnet-infrastructure" />
-  </Target>
+	<ItemGroup>
+		<ProjectReference Include="..\dotnet-core\dotnet-core.csproj"/>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.4"/>
+	</ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<OutputPath>../../dist/libs/dotnet-infrastructure</OutputPath>
+	</PropertyGroup>
+	<Target Name="CheckNxModuleBoundaries" BeforeTargets="Build">
+		<Exec Command="node ../../node_modules/@nx-dotnet/core/src/tasks/check-module-boundaries.js -p dotnet-infrastructure"/>
+	</Target>
 </Project>
