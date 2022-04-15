@@ -27,12 +27,13 @@
     "statusBar.debuggingBorder": "#b84277",
     "titleBar.border": "#42b883"
   },
-  // This file is needed for the .NET Core 3.1 or .NET Core 5.0
+
   "files.exclude": {
-    "**/Startup.cs": true,
+    "**/Startup.cs": true,  // This file is needed for the .NET Core 3.1 or .NET Core 5.0
+    "**/dotnet-api.db": true, // SQLite database file
     "**/*.db-shm": true,
     "**/*.db-wal": true,
     "**/appsettings*.json": true,
-    "**/dotnet-api.db": true,
+    "**/Properties/": true,
   }
 }
