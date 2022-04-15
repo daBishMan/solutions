@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Solutions.Dotnet.Core.Entities;
 using Solutions.Dotnet.Core.Interfaces;
