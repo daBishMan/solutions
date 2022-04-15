@@ -29,7 +29,12 @@
       "label": "watch",
       "command": "dotnet",
       "type": "process",
-      "args": ["watch", "run", "--project", "${workspaceFolder}/apps/dotnet/api/Solutions.Dotnet.Api.csproj"],
+      "args": [
+        "watch",
+        "run",
+        "--project",
+        "${workspaceFolder}/apps/dotnet/api/Solutions.Dotnet.Api.csproj"
+      ],
       "problemMatcher": "$msCompile"
     }
   ]
