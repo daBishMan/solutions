@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Solutions.Dotnet.API.Helpers;
 using Solutions.Dotnet.Core.Interfaces;
 using Solutions.Dotnet.Infrastructure.Data;
 
@@ -8,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 // We add our services here so we can add them to DI, order here does not matter
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+builder.Services.AddAutoMapper(typeof(MappingProfiles));
 
 builder.Services.AddControllers();
 
@@ -28,6 +31,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 
 app.UseAuthorization();
 
