@@ -7,9 +7,7 @@ using Solutions.Dotnet.Core.Specifications;
 
 namespace Solutions.Dotnet.API.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class ProductsController : ControllerBase
+public class ProductsController : BaseApiController
 {
   private readonly IGenericRepository<Product> productsRepo;
   private readonly IGenericRepository<ProductBrand> productBrandRepo;
@@ -35,17 +33,6 @@ public class ProductsController : ControllerBase
     var products = await this.productsRepo.ListAsync(spec);
 
     return Ok(this.mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDTO>>(products));
-
-    // return products.Select(product => new ProductToReturnDTO
-    // {
-    //   Id = product.Id,
-    //   Name = product.Name,
-    //   Description = product.Description,
-    //   Price = product.Price,
-    //   PictureUrl = product.PictureUrl,
-    //   ProductType = product.ProductType.Name,
-    //   ProductBrand = product.ProductBrand.Name
-    // }).ToList();
   }
 
   [HttpGet("{id}")]
@@ -55,7 +42,6 @@ public class ProductsController : ControllerBase
     var product = await this.productsRepo.GetEntityWithSpec(spec);
 
     return this.mapper.Map<Product, ProductToReturnDTO>(product);
-
   }
 
   [HttpGet("brands")]
