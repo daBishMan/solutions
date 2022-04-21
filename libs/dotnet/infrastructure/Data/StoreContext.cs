@@ -18,5 +18,22 @@ public class StoreContext : DbContext
   {
     base.OnModelCreating(modelBuilder);
     modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+    // This is to take care of the issue with Sqlite which does not support decimal data type.
+    if(Database.ProviderName == "Microsoft.EntityFrameworkCore.Sqlite")
+    {
+      foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+      {
+        var properties = entityType.ClrType.GetProperties()
+                                           .Where(p => p.PropertyType == typeof(decimal));
+
+        foreach (var property in properties)
+        {
+          modelBuilder.Entity(entityType.Name)
+                      .Property(property.Name)
+                      .HasConversion<double>();
+        }
+      }
+    }
   }
 }
