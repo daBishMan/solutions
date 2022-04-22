@@ -29,12 +29,12 @@
   },
 
   "files.exclude": {
-    "**/Startup.cs": true,  // This file is needed for the .NET Core 3.1 or .NET Core 5.0
-    "**/OLD_Program.cs": true,  // This file is needed for the .NET Core 3.1 or .NET Core 5.0
+    "**/Startup.cs": true, // This file is needed for the .NET Core 3.1 or .NET Core 5.0
+    "**/OLD_Program.cs": true, // This file is needed for the .NET Core 3.1 or .NET Core 5.0
     "**/dotnet-api.db": true, // SQLite database file
     "**/*.db-shm": true,
     "**/*.db-wal": true,
     "**/appsettings*.json": true,
-    "**/Properties/": true,
+    "**/Properties/": true
   }
 }
