@@ -1,4 +1,3 @@
-using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Solutions.Dotnet.API.Errors;
 using Solutions.Dotnet.Infrastructure.Data;
@@ -19,7 +18,8 @@ public class BuggyController : BaseApiController
   public ActionResult GetNotFoundRequest()
   {
     var thing = this.context.Products.Find(42);
-    if(thing == null) {
+    if (thing == null)
+    {
       return NotFound(new ApiResponse(404));
     }
     return Ok(thing);

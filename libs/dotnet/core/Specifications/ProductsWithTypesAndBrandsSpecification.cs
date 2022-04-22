@@ -1,16 +1,14 @@
-using System.Linq.Expressions;
 using Solutions.Dotnet.Core.Entities;
 
 namespace Solutions.Dotnet.Core.Specifications;
 
 public class ProductsWithTypesAndBrandsSpecification : BaseSpecification<Product>
 {
-  public ProductsWithTypesAndBrandsSpecification(
-    string sort,
-    int? brandId,
-    int? typeId) : base(criteria: product =>
-    (!brandId.HasValue || product.ProductBrandId == brandId) &&
-    (!typeId.HasValue || product.ProductTypeId == typeId)
+  public ProductsWithTypesAndBrandsSpecification(string sort,
+                                                 int? brandId,
+                                                 int? typeId) : base(product =>
+    (!brandId.HasValue || product.ProductBrandId == brandId)
+    && (!typeId.HasValue || product.ProductTypeId == typeId)
   )
   {
     AddInclude(p => p.ProductType);

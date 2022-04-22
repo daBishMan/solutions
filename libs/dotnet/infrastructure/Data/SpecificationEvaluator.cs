@@ -29,7 +29,7 @@ public class SpecificationEvaluator<TEntity> where TEntity : BaseEntity
     }
 
     // Ensure we page after ordering and filtering
-    if(specification.IsPagingEnabled)
+    if (specification.IsPagingEnabled)
     {
       query = query.Skip(specification.Skip).Take(specification.Take);
     }
